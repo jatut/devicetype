@@ -10,11 +10,11 @@ is_full_depth: false
 airflow: front-to-rear
 power-ports:
   - name: PSU
-    type: iec-60320-c14
+    type: dc-terminal
     maximum_draw: 50
 console-ports:
   - name: Console
-    type: RJ-45
+    type: rj-45
   - name: usb 1 v.3.0
     type: usb-a
   - name: usb 2 v.3.0
@@ -29,16 +29,16 @@ console-ports:
     type: rj-11
 interfaces:
   - name: ix0
-    type: 1000base-t
+    type: 10gbase-x-sfpp
   - name: ix1
-    type: 1000base-t
-  - name: ix2-sfp
     type: 10gbase-x-sfpp
-  - name: ix2-rj45
-    type: 1000base-t
-  - name: ix3-sfp
+  - name: ix2-combo-sfp
     type: 10gbase-x-sfpp
-  - name: ix3-rj45
+  - name: ix2-combo-rj45
+    type: 1000base-t
+  - name: ix3-combo-sfp
+    type: 10gbase-x-sfpp
+  - name: ix3-combo-rj45
     type: 10gbase-x-sfpp
   - name: igb0
     type: 1000base-t
