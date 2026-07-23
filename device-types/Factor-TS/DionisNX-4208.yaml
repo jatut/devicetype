@@ -1,8 +1,8 @@
 ---
 manufacturer: Factor-TS
-model: DionisNX-C-3000
-slug: factor-ts-dionisnx-c-3000
-part_number: RM-6E-4S
+model: DionisNX-4208
+slug: factor-ts-dionisnx-4208
+part_number: dionisnx-4208
 u_height: 1
 is_full_depth: true
 #power-ports:
