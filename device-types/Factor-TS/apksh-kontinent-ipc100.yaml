@@ -1,0 +1,42 @@
+---
+manufacturer: Factor-TS
+model: Factor-TS APKSH KONTINENT IPC100
+slug: factor-ts-apksh-kontinent-ipc100
+part_number: APKSH KONTINENT-IPC100
+front_image: true
+rear_image: false
+u_height: 1
+is_full_depth: false
+airflow: front-to-rear
+power-ports:
+  - name: PSU
+    type: iec-60320-c14
+    maximum_draw: 50
+console-ports:
+  - name: Keyboard Port
+    type: other
+  - name: Video Port
+    type: other
+  - name: Com Port
+    type: de-9
+  - name: Usb 1
+    type: usb-a
+  - name: Usb 2
+    type: usb-a
+interfaces:
+  - name: em0
+    type: 1000base-t
+  - name: em1
+    type: 1000base-t
+  - name: em2
+    type: 1000base-t
+  - name: em3
+    type: 1000base-t
+  - name: em4
+    type: 1000base-t
+  - name: em5
+    type: 1000base-t
+  - name: igb0
+    type: 1000base-x-sfp
+  - name: igb1
+    type: 1000base-x-sfp
