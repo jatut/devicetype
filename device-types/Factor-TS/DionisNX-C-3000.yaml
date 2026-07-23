@@ -1,14 +1,18 @@
 ---
 manufacturer: Factor-TS
-model: DionisNX-C 3000
+model: DionisNX-C-3000
 slug: factor-ts-dionisnx-c-3000
 part_number: RM-6E-4S
 u_height: 1
 is_full_depth: true
+#power-ports:
+#  - name: PSU0
+#    type: iec-60320-c14
+#    maximum_draw: 50
 power-ports:
-  - name: PSU0
-    type: iec-60320-c14
-    maximum_draw: 50
+  - name: PSU
+    type: dc-terminal
+    maximum_draw: 78
 interfaces:
   - name: ethernet 0
     type: 1000base-t
@@ -23,10 +27,17 @@ interfaces:
   - name: ethernet 5
     type: 1000base-t
   - name: ethernet 6
-    type: 1000base-x-sfp
+    type: 1000base-t
   - name: ethernet 7
-    type: 1000base-x-sfp
+    type: 1000base-t
   - name: ethernet 8
     type: 1000base-x-sfp
   - name: ethernet 9
     type: 1000base-x-sfp
+console-ports:
+  - name: console
+    type: rj-45
+  - name: usb 1
+    type: usb-a
+  - name: usb 2
+    type: usb-a
