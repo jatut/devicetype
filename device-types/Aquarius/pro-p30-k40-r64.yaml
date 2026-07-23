@@ -1,0 +1,21 @@
+---
+manufacturer: Aquarius
+model: Pro P30 K40 R64
+slug: aquarius-pro-p30-k40-r64
+part_number: 222091200171V
+#front_image: true
+#rear_image: true
+u_height: 0
+is_full_depth: false
+weight: 5.47
+weight_unit: kg
+comments: '[AQUARIUS  Pro P30 K40 R64s]'
+power-ports:
+  - name: PSU
+    type: iec-60320-c14
+    maximum_draw: 180
+interfaces:
+  - name: ETH-1
+    type: 1000base-t
+  - name: ETH-2
+    type: 1000base-t

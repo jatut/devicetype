@@ -1,0 +1,73 @@
+# Contributing
+
+This library is maintained by and for the community of NetBox users. As such, the regular contribution of accurate and complete device type definitions is crucial to its success.
+
+Эта библиотека поддерживается сообществом пользователей NetBox и для них. Поэтому регулярное предоставление точных и полных определений типов устройств имеет решающее значение для ее успеха.
+
+## Writing Definition Files
+
+Each NetBox device type definition exists as a single YAML file, arranged by manufacturer (vendor). Files are named by concatenating the definition's model name with a `.yaml` extension. For example:
+
+Каждое определение типа устройства NetBox существует в виде отдельного файла YAML, упорядоченного по производителю (вендору). Имена файлов определяются путем объединения названий моделей в определениях с расширением `.yaml`. Например:
+
+```no-highlight
+device-types/Acme/BFR-1000.yaml
+device-types/Acme/BFR-2000.yaml
+```
+
+When writing new definitions, there are some important guidelines to follow:
+При написании новых определений необходимо следовать нескольким важным рекомендациям:
+
+- Every unique model number requires a discrete definition file, even if the set of components is identical.
+    - Для каждого уникального номера модели требуется отдельный файл определения, даже если набор компонентов идентичен.
+- Definition files must end in `.yaml`, or `.yml`
+    - Файлы определений должны заканчиваться на `.yaml` или `.yml`
+- Use proper, human-friendly names when creating manufacturer directories (e.g. `Alcatel-Lucent` versus `alcatel`).
+    - При создании каталогов производителей используйте правильные, понятные пользователю названия (например, "Alcatel-Lucent" или "alcatel").
+- Include only components which are fixed to the chassis. Module bays and associated module types should be included for
+all modular components which can be modelled in NetBox (network modules, power supplies, etc).
+    - Включайте только те компоненты, которые закреплены на корпусе. Отсеки для модулей и соответствующие типы модулей должны быть включены для всех модульных компонентов, которые
+     могут быть смоделированы в NetBox (сетевые модули, блоки питания и т.д.).
+- Name components exactly as they appear in the device's operating system (as opposed to the physical chassis label, if different).
+    - Присваивайте компонентам названия в точности так, как они указаны в операционной системе устройства (в отличие от обозначения физического корпуса, если оно отличается).
+- Use the complete form of interface names where applicable. For example, use `TenGigabitEthernet1/2/3` instead of `Te1/2/3`.
+    - Используйте полные названия интерфейсов, где это применимо. Например, используйте `TenGigabitEthernet1/2/3` вместо `Te1/2/3`.
+
+Additionally, be sure to adhere to the following style guidance:
+Кроме того, обязательно придерживайтесь следующих рекомендаций по стилю:
+
+- Use two spaces for indenting.
+    - Используйте два пробела для отступа.
+- Specify a device type's attributes before listing its components.
+    - Укажите атрибуты типа устройства, прежде чем перечислять его компоненты.
+- Avoid encapsulating YAML values in quotes unless necessary to avoid a syntax error.
+    - Избегайте заключения значений YAML в кавычки, если только это не необходимо для предотвращения синтаксической ошибки.
+- End each definition file with a blank line.
+    - Завершайте каждый файл определения пустой строкой.
+
+## The Contribution Workflow
+
+The process of submitting new definitions to the library is as follows:
+
+
+1. Verify that the proposed definition does not duplicate or conflict with an existing definition. (If unsure, please raise an issue seeking clarification prior to submitting a PR.)
+    - Убедитесь, что предлагаемое определение не дублирует существующее определение и не противоречит ему. (Если вы не уверены, пожалуйста, поднимите вопрос с просьбой разъяснить его до отправки PR-запроса.)
+1. [Fork](https://guides.github.com/activities/forking/) the GitHub project and create a new branch to hold your proposed changes. If adding new definitions, the branch should be named so that it loosely follows the format `<manufacturer>-<series>` (for example, `cisco-c9300`).
+    [Fork](https://guides.github.com/activities/forking/) запустите проект на GitHub и создайте новую ветку для хранения предлагаемых вами изменений. При добавлении новых определений название ветви должно соответствовать формату "<производитель>-<серия>" (например, "cisco-c9300`).
+1. Install & run included pre-commit script as described in the [README.md](README.md) (Optional, but recommended)
+    Установите и запустите включенный сценарий предварительной фиксации, как описано в [README.md](README.md) (необязательно, но рекомендуется).
+1. Introduce the new content exactly as it should appear once accepted.
+    Представляйте новый контент именно так, как он должен выглядеть после его принятия.
+1. Create a [draft pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests) to merge your new branch into the `master` branch. Include a brief description of the changes introduced in the PR.
+    Создайте [запрос на извлечение черновика](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests ) чтобы объединить вашу новую ветку с `главной` веткой. Включите краткое описание изменений, внесенных в этот ПРОЦЕСС.
+1. GitHub will automatically run tests against your draft PR to validate it. If the tests fail, make the necessary changes to your branch so that they pass.
+1. Submit the [pull request](https://github.com/netbox-community/devicetype-library/compare?expand=1) for review. Please note that submitted PRs which do not pass validation will be closed and must be rescinded.
+    Отправьте [запрос на извлечение](https://github.com/netbox-community/devicetype-library/compare?expand=1) для проверки. Пожалуйста, обратите внимание, что отправленные PR-сообщения, которые не прошли проверку, будут закрыты и должны быть аннулированы.
+1. A maintainer will review your PR and take one of three actions:
+    Специалист по сопровождению рассмотрит ваш PR и предпримет одно из трех действий:
+  - Approve and merge it
+    - Утвердит и объединит его
+  - Request revisions
+    - Запросит внесение изменений
+  - Close the PR citing a reason (e.g. failing validation or not applicable to the library)
+    - Закроtn PR, указав причину (например, неудачная проверка или неприменимо к библиотеке).

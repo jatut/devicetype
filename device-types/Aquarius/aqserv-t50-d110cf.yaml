@@ -1,0 +1,47 @@
+---
+manufacturer: Aquarius
+model: AQserv T50 D110CF
+slug: aquarius-aqserv-t50-d110cf
+u_height: 1
+is_full_depth: true
+airflow: front-to-rear
+part_number: qret-t50d110cf1s10r116r290g01rlhrnnn3
+#front_image: true
+#rear_image: true
+comments: '[AQUARIUS AQserv T50 D110CF Specs](https://www.aq.ru/product/aquarius-server-t50-d110cf/)'
+weight: 14.56
+weight_unit: kg
+console-ports:
+  - name: Serial
+    type: de-9
+  - name: DISPLAY
+    type: other
+  - name: usb 1
+    type: usb-mini-b
+  - name: usb 2
+    type: usb-a
+  - name: usb 3
+    type: usb-a
+  - name: usb 4
+    type: usb-a
+module-bays:
+  - name: PSU1
+    position: PSU1
+  - name: PSU2
+    position: PSU2
+  - name: PCIe1
+    position: PCIe1
+  - name: PCIe2
+    position: PCIe2
+interfaces:
+  - name: Eth-1
+    type: 1000base-t
+  - name: Eth-2
+    type: 1000base-t
+  - name: Eth-3
+    type: 10gbase-x-sfpp
+  - name: Eth-4
+    type: 10gbase-x-sfpp
+#  - name: MGMT
+#    type: 1000base-t
+#    mgmt_only: true
