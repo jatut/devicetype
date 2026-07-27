@@ -67,6 +67,6 @@ interfaces:
   - name: fxo16
     type: e1
   - name: Sync.1
-    type: other
+    type: e1
   - name: sync.2
-    type: other
+    type: e1
