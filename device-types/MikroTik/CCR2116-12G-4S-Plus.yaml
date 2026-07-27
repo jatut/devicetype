@@ -7,9 +7,11 @@ is_full_depth: false
 u_height: 1
 comments: |
   [Product Page](https://mikrotik.com/product/ccr2116_12g_4splus)
-front_image: false
-rear_image: false
+front_image: true
+rear_image: true
 is_powered: true
+weight: 2600
+weight_unit: g
 interfaces:
   - name: ether1
     type: 1000base-t

@@ -3,8 +3,8 @@ manufacturer: Factor-TS
 model: Factor-TS APKSH KONTINENT IPC100
 slug: factor-ts-apksh-kontinent-ipc100
 part_number: APKSH KONTINENT-IPC100
-front_image: true
-rear_image: false
+#front_image: true
+#rear_image: false
 u_height: 1
 is_full_depth: false
 airflow: front-to-rear

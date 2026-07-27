@@ -3,8 +3,8 @@ manufacturer: Factor-TS
 model: Factor-TS APKSH KONTINENT IPC300R
 slug: factor-ts-apksh-kontinent-ipc300r
 part_number: APKSH KONTINENT-IPC300R
-front_image: true
-rear_image: false
+#front_image: true
+#rear_image: false
 u_height: 1
 is_full_depth: false
 airflow: front-to-rear
@@ -19,7 +19,7 @@ console-ports:
     type: usb-a
   - name: usb 2 v.3.0
     type: usb-a
-  - name: Display port VGA REAR
+  - name: Display port REAR
     type: other
   - name: Usb 1 v.2.0 REAR
     type: usb-a
@@ -46,5 +46,5 @@ interfaces:
     type: 1000base-t
   - name: igb2
     type: 1000base-t
-  - name: igb1
+  - name: igb3
     type: 1000base-t
