@@ -6,7 +6,7 @@ part_number: SMG-3016
 u_height: 1.0
 is_full_depth: false
 airflow: passive
-comments: '[Datasheet](https://api.prod.eltex-co.ru/storage/upload_center/files/38/SMG-200_datasheet_3.406.1.pdf)'
+#comments: 
 weight: 2.47
 weight_unit: kg
 console-ports:
